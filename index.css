@@ -1,0 +1,75 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+    box-sizing: border-box;
+    color: white;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(images/pexels-goumbik-317385.jpg);
+    background-size: cover;
+}
+
+/* Started Here */
+
+.container {
+    position: relative;
+}
+
+.clock {
+    height: 300px;
+    width: 300px;
+    background-color: rgb(79, 202, 221);
+    border: 2px solid rgb(59, 55, 55);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 30px;
+}
+
+.clock span {
+    position: absolute;
+    transform: rotate(calc(30deg * var(--i)));
+    inset: 12px;
+    text-align: center;
+}
+
+.clock span b {
+    color: black;
+    transform: rotate(calc(-30deg * var(--i)));
+    display: inline-block;
+}
+
+.clock::before {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: rgb(85, 71, 71);
+    align-items: center;
+    z-index: 2;      
+}
+
+.hand {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.hand i {
+    position: absolute;
+    height: var(--h);
+    width: 4px;
+    background-color: var(--clr);
+    border-radius: 8px;
+}
+
+/* End Here */
